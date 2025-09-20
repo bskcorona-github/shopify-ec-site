@@ -114,3 +114,50 @@ export const GET_COLLECTIONS_QUERY = `
     }
   }
 `
+
+export const GET_COLLECTION_PRODUCTS_QUERY = `
+  query getCollectionProducts($handle: String!, $first: Int!) {
+    collection(handle: $handle) {
+      id
+      title
+      description
+      handle
+      image {
+        url
+        altText
+      }
+      products(first: $first) {
+        edges {
+          node {
+            id
+            title
+            description
+            handle
+            images(first: 1) {
+              edges {
+                node {
+                  url
+                  altText
+                }
+              }
+            }
+            priceRange {
+              minVariantPrice {
+                amount
+                currencyCode
+              }
+            }
+            variants(first: 1) {
+              edges {
+                node {
+                  id
+                  availableForSale
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
