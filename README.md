@@ -131,16 +131,44 @@ colors: {
 
 ### Vercel（推奨）
 
-1. Vercelアカウントを作成
-2. GitHubリポジトリを接続
-3. 環境変数を設定
-4. デプロイ
+#### 方法1: Vercel CLIを使用
+
+1. Vercel CLIをインストール
+```bash
+npm i -g vercel
+```
+
+2. ログイン
+```bash
+vercel login
+```
+
+3. デプロイ
+```bash
+vercel --prod
+```
+
+#### 方法2: Vercel Dashboardを使用
+
+1. [Vercel](https://vercel.com)にアクセス
+2. GitHubアカウントでログイン
+3. "New Project"をクリック
+4. GitHubリポジトリ`bskcorona-github/shopify-ec-site`を選択
+5. 環境変数を設定：
+   - `NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN`: あなたのShopifyストアドメイン
+   - `NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN`: Storefront APIアクセストークン
+   - `NEXT_PUBLIC_APP_URL`: デプロイ後のURL
+6. "Deploy"をクリック
+
+#### 自動デプロイ
+
+GitHubリポジトリにプッシュするたびに、Vercelが自動的にデプロイを実行します。
 
 ### その他のプラットフォーム
 
-- Netlify
-- AWS Amplify
-- Railway
+- **Netlify**: `npm run build && npm run export`
+- **AWS Amplify**: Next.jsアプリとして設定
+- **Railway**: GitHubリポジトリを接続
 
 ## 📝 ライセンス
 
