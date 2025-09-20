@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ShoppingCart, Heart, Star, ArrowLeft, Minus, Plus } from 'lucide-react'
+import { ShoppingCart, Heart, Star, ArrowLeft, Minus, Plus, CheckCircle } from 'lucide-react'
 import { storefront, GET_PRODUCT_QUERY, isDemo } from '@/lib/shopify'
 import { useCart } from '@/contexts/CartContext'
 
