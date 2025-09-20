@@ -84,8 +84,8 @@ export function FeaturedProducts() {
           variables: { first: 8 }
         })
         
-        if (response.data?.products?.edges) {
-          const productsData = response.data.products.edges.map((edge: any) => edge.node)
+        if ((response as any).data?.products?.edges) {
+          const productsData = (response as any).data.products.edges.map((edge: any) => edge.node)
           setProducts(productsData)
         }
       } catch (error) {

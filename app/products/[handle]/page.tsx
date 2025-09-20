@@ -88,8 +88,8 @@ export default function ProductPage() {
           variables: { handle: params.handle }
         })
         
-        if (response.data?.product) {
-          const productData = response.data.product
+        if ((response as any).data?.product) {
+          const productData = (response as any).data.product
           setProduct(productData)
           if (productData.variants.edges.length > 0) {
             setSelectedVariant(productData.variants.edges[0].node)

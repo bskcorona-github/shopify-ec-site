@@ -94,8 +94,8 @@ export function Categories() {
           variables: { first: 6 }
         })
         
-        if (response.data?.collections?.edges) {
-          const collectionsData = response.data.collections.edges.map((edge: any) => edge.node)
+        if ((response as any).data?.collections?.edges) {
+          const collectionsData = (response as any).data.collections.edges.map((edge: any) => edge.node)
           setCollections(collectionsData)
         }
       } catch (error) {
