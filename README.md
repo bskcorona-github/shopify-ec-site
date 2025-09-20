@@ -1,6 +1,13 @@
 # Shopify EC Store
 
+[![GitHub](https://img.shields.io/github/license/bskcorona-github/shopify-ec-site)](https://github.com/bskcorona-github/shopify-ec-site)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC)](https://tailwindcss.com/)
+
 ShopifyのMCP（Model Context Protocol）を活用したモダンなECサイトです。Next.js 14とShopify Storefront APIを使用して構築されています。
+
+🌐 **Live Demo**: [https://github.com/bskcorona-github/shopify-ec-site](https://github.com/bskcorona-github/shopify-ec-site)
 
 ## 🚀 特徴
 
